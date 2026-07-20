@@ -1,0 +1,27 @@
+# Python
+__pycache__/
+*.py[cod]
+venv/
+
+# Node
+frontend/node_modules/
+
+# AI Files
+backend/dataset/
+backend/videos/
+backend/output/
+backend/uploads/
+backend/yolov8n.pt
+
+backend/ai/traffic_model.pkl
+backend/ai/feature_columns.pkl
+
+# Generated Files
+backend/traffic_report.pdf
+backend/traffic_data.csv
+
+# VS Code
+.vscode/
+
+# Environment
+.env
