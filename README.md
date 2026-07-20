@@ -1,87 +1,121 @@
-#TRAFFIC VISION-AI
 # 🚦 TrafficVision AI
+### Smart Traffic Prediction & Congestion Management System
 
-## Smart Traffic Prediction & Congestion Management System
-
-TrafficVision AI is an AI-powered web application designed to monitor traffic conditions, manage congestion, and provide intelligent traffic insights. The system uses a React frontend, FastAPI backend, and PostgreSQL database to provide a secure and scalable platform.
-
----
-
-## 📌 Project Overview
-
-The objective of TrafficVision AI is to improve urban traffic management by providing a centralized dashboard for monitoring traffic conditions. Users can securely register, log in, and access a dashboard that displays traffic statistics and congestion information.
-
-This project is being developed as a Final Year B.Tech Mini Project.
+TrafficVision AI is an AI-powered intelligent traffic monitoring system that detects vehicles, predicts traffic congestion, estimates travel time, and recommends optimal routes using Computer Vision and Machine Learning.
 
 ---
 
-## 🚀 Features Implemented (Milestone 1)
+# 📌 Project Overview
 
+The project simulates a smart traffic management system by processing traffic images from a dataset using YOLOv8. The detected vehicle information is stored in PostgreSQL and visualized through a React dashboard. The system also predicts future traffic conditions and generates reports for analysis.
+
+---
+
+# ✨ Features
+
+### 🔐 Authentication
 - User Registration
 - User Login
 - JWT Authentication
-- Secure Password Hashing (Argon2)
-- Protected Dashboard
-- Logout Functionality
-- PostgreSQL Database Integration
-- FastAPI REST APIs
-- React Frontend
-- Responsive User Interface
+
+### 🤖 AI Vehicle Detection
+- YOLOv8 Vehicle Detection
+- Car Detection
+- Bus Detection
+- Truck Detection
+- Motorcycle Detection
+- Vehicle Counting
+
+### 🚦 Traffic Analysis
+- Congestion Level Detection
+- Traffic Volume Prediction
+- Travel Time Estimation
+- Best Route Recommendation
+
+### 📊 Dashboard
+- Live Dashboard Statistics
+- Traffic Analytics Charts
+- Dataset Summary
+- Traffic History
+- Live Camera Feed
+- Detection History
+- Congestion Meter
+- Traffic Alerts
+
+### 📄 Reports
+- PDF Report Generation
+- CSV Export
 
 ---
 
-## 🛠 Technologies Used
+# 🧠 AI Models & Algorithms Used
 
-### Frontend
+## Computer Vision
+- YOLOv8 (Ultralytics)
+
+## Machine Learning
+- Random Forest Regression
+
+## Algorithms
+- Vehicle Counting
+- Congestion Classification
+- Travel Time Estimation
+- Route Recommendation
+
+---
+
+# 🛠️ Technology Stack
+
+## Frontend
 - React.js
-- React Router
 - Axios
-- React Icons
+- HTML
+- CSS
+- JavaScript
 
-### Backend
+## Backend
 - FastAPI
 - Python
 - SQLAlchemy
 - Pydantic
-- pwdlib (Argon2)
+- Uvicorn
 
-### Database
+## Database
 - PostgreSQL
 
-### Tools
-- VS Code
-- Git
-- GitHub
-- Swagger UI
-- pgAdmin
+## AI & Machine Learning
+- YOLOv8
+- OpenCV
+- Scikit-learn
+- Pandas
+- NumPy
 
 ---
 
-## 📂 Project Structure
+# 📂 Project Structure
 
 ```
-TrafficVision-AI
+TrafficVision-AI/
+
+├── backend/
+│   ├── app/
+│   ├── ai/
+│   ├── dataset/
+│   └── output/
 │
-├── backend
-│   ├── app
-│   ├── venv
-│   ├── requirements.txt
-│   └── main.py
-│
-├── frontend
-│   ├── src
-│   ├── public
-│   ├── package.json
-│   └── node_modules
+├── frontend/
+│   ├── src/
+│   ├── public/
+│   └── package.json
 │
 └── README.md
 ```
 
 ---
 
-## ⚙ Installation
+# ⚙️ Installation
 
-### Clone Repository
+## Clone Repository
 
 ```bash
 git clone https://github.com/ChetanGoud77/TrafficVisionAI.git
@@ -89,7 +123,7 @@ git clone https://github.com/ChetanGoud77/TrafficVisionAI.git
 
 ---
 
-### Backend
+## Backend
 
 ```bash
 cd backend
@@ -100,12 +134,24 @@ venv\Scripts\activate
 
 pip install -r requirements.txt
 
-uvicorn app.main:app --reload
+python -m uvicorn app.main:app --reload
+```
+
+Backend runs at:
+
+```
+http://127.0.0.1:8000
+```
+
+Swagger API:
+
+```
+http://127.0.0.1:8000/docs
 ```
 
 ---
 
-### Frontend
+## Frontend
 
 ```bash
 cd frontend
@@ -115,77 +161,121 @@ npm install
 npm start
 ```
 
----
-
-## Database
-
-Create a PostgreSQL database named
+Runs at:
 
 ```
-trafficvision_db
-```
-
-Update the database credentials in
-
-```
-backend/app/database.py
+http://localhost:3000
 ```
 
 ---
 
-## API Testing
+# 🚀 Running the Complete Project
 
-Open Swagger UI
+### Terminal 1
 
+```bash
+cd backend
+venv\Scripts\activate
+python -m uvicorn app.main:app --reload
 ```
-http://127.0.0.1:8000/docs
+
+### Terminal 2
+
+```bash
+cd frontend
+npm start
 ```
 
-Available APIs
+### Terminal 3
 
-- Register User
-- Login User
+```bash
+cd backend
+venv\Scripts\activate
+python -m ai.camera_simulator
+```
 
 ---
 
-## Milestone 1 Completed
+# 📊 System Workflow
 
-✔ GitHub Setup
-
-✔ React Setup
-
-✔ FastAPI Setup
-
-✔ PostgreSQL Integration
-
-✔ Registration API
-
-✔ Login API
-
-✔ JWT Authentication
-
-✔ Protected Dashboard
-
-✔ React–Backend Integration
-
-✔ Professional User Interface
+```
+Traffic Images
+        │
+        ▼
+YOLOv8 Vehicle Detection
+        │
+        ▼
+Vehicle Counting
+        │
+        ▼
+Congestion Analysis
+        │
+        ▼
+PostgreSQL Database
+        │
+        ▼
+Random Forest Prediction
+        │
+        ▼
+FastAPI APIs
+        │
+        ▼
+React Dashboard
+```
 
 ---
 
-## Future Enhancements (Milestone 2)
+# 📈 Current Project Status
 
-- Live Traffic Prediction
+✅ Milestone 1 Completed
+
+- Authentication
+- FastAPI Backend
+- PostgreSQL Integration
+- React Frontend
+- Dashboard Setup
+
+---
+
+✅ Milestone 2 Completed
+
+- YOLOv8 Vehicle Detection
+- Live Camera Simulation
+- Vehicle Counting
+- Congestion Detection
+- AI Prediction
+- Travel Time Estimation
+- Route Recommendation
+- Dashboard Analytics
+- Detection History
+- PDF Report Generation
+- CSV Export
+- Professional Dashboard UI
+
+---
+
+# 🔮 Future Enhancements
+
+- Real-time CCTV Camera Integration
+- Live GPS-Based Traffic Monitoring
 - Google Maps Integration
-- Traffic Analytics Dashboard
-- AI-Based Congestion Detection
-- Machine Learning Prediction Model
-- Live Camera Feed
-- Emergency Alert System
+- WebSocket-Based Live Updates
+- Email/SMS Traffic Alerts
+- Mobile Application
+- Cloud Deployment (AWS/Azure)
 
 ---
 
-## Developed By
+# 👨‍💻 Developed By
 
 **Chetan Goud**
 
-B.Tech CSE (AI & ML)
+B.Tech – Computer Science & Engineering (AI & ML)
+
+Passionate about Artificial Intelligence, Machine Learning, Computer Vision, and Full-Stack Development.
+
+---
+
+# ⭐ Support
+
+If you found this project useful, please consider giving it a ⭐ on GitHub.
